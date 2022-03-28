@@ -50,12 +50,13 @@ main {
     margin: auto;
     
 }
-#board li{
+li{
    flex-grow: 2;
-   
+   background-color: #121212;
+   color: var(--color-black);
     border: 2px solid var(--color-gray-dark); 
-    line-height: 2rem;
-    width: 2rem;
+    height: 5rem;
+    width: 5rem;
     display: inline-block;
 }
 .white{
