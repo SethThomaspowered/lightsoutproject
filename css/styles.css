@@ -1,7 +1,7 @@
 :root {
     --color-black: #121212;
     --color-white: #fff;
-    --color-green: #538d4e;
+    --color-green: hsl(115, 29%, 43%);
     --color-yellow: #b59f3b;
     --color-gray-dark: #3A3A3C;
     --color-gray-light: #818384;
@@ -34,7 +34,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+
     background-color: var(--color-gray-light);
 }
 #board{
@@ -58,6 +59,7 @@ li{
     height: 5rem;
     width: 5rem;
     display: inline-block;
+    cursor: pointer;
 }
 .white{
     background-color: var(--color-white);
@@ -67,5 +69,16 @@ li{
     background-color: var(--color-black);
     color: var(--color-black);
 }
-
+#reset{
+    background-color: var(--color-green);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 15%;
+    gap: 10px;
+}
+#reset:hover{
+    background-color: hsl(115, 29%, 73%);
+    cursor: pointer;
+}
 footer { border-top: 1px solid var(--color-gray-dark);}
