@@ -22,7 +22,7 @@ const generateHeader = (header) =>{
 
 }
 let boardArray=[];
-const generateBoard = (board, rows = 2, columns=2) =>{
+const generateBoard = (board, rows = 3, columns=3) =>{
     
     for (let row = 0; row<rows; row++) {
         const elmRow = document.createElement('ul');
@@ -41,7 +41,7 @@ const generateBoard = (board, rows = 2, columns=2) =>{
            
             elmRow.appendChild(elmColumn);
             elmColumn.addEventListener('click', (el)=>{
-                toggleLights(elmColumn)
+                toggleLights(elmColumn, rows)
             })
         } 
         board.appendChild(elmRow);
@@ -49,28 +49,82 @@ const generateBoard = (board, rows = 2, columns=2) =>{
     }
 }
 let boxes;
-const toggleLights=(el)=>{
+const toggleLights=(el, rows)=>{
     boxes=document.querySelectorAll('.box');          
     el.classList.toggle('white');
-    if(el.classList.contains('row0')&& el.classList.contains('1'))
-    {
-        boxes[0].classList.toggle('white');
-        boxes[3].classList.toggle('white');
+    if(rows===2){
+        if(el.classList.contains('row0')&& el.classList.contains('1'))
+        {
+            boxes[0].classList.toggle('white');
+            boxes[3].classList.toggle('white');
+        }
+        if(el.classList.contains('row0')&& el.classList.contains('0'))
+        {
+            boxes[1].classList.toggle('white');
+            boxes[2].classList.toggle('white');
+        }
+        if(el.classList.contains('row1')&& el.classList.contains('1'))
+        {
+            boxes[1].classList.toggle('white');
+            boxes[2].classList.toggle('white');
+        }
+        if(el.classList.contains('row1')&& el.classList.contains('0'))
+        {
+            boxes[0].classList.toggle('white');
+            boxes[3].classList.toggle('white');
+        }
     }
-    if(el.classList.contains('row0')&& el.classList.contains('0'))
-    {
-        boxes[1].classList.toggle('white');
-        boxes[2].classList.toggle('white');
-    }
-    if(el.classList.contains('row1')&& el.classList.contains('1'))
-    {
-        boxes[1].classList.toggle('white');
-        boxes[2].classList.toggle('white');
-    }
-    if(el.classList.contains('row1')&& el.classList.contains('0'))
-    {
-        boxes[0].classList.toggle('white');
-        boxes[3].classList.toggle('white');
+    else if(rows===3){
+        if(el.classList.contains('row0')&& el.classList.contains('0'))
+        {
+            boxes[1].classList.toggle('white');
+            boxes[3].classList.toggle('white');
+        }
+        if(el.classList.contains('row0')&& el.classList.contains('1'))
+        {
+            boxes[0].classList.toggle('white');
+            boxes[2].classList.toggle('white');
+            boxes[4].classList.toggle('white');
+        }
+        if(el.classList.contains('row0')&& el.classList.contains('2'))
+        {
+            boxes[1].classList.toggle('white');
+            boxes[5].classList.toggle('white');
+        }
+        if(el.classList.contains('row1')&& el.classList.contains('0'))
+        {
+            boxes[0].classList.toggle('white');
+            boxes[4].classList.toggle('white');
+            boxes[6].classList.toggle('white');
+        }
+        if(el.classList.contains('row1')&& el.classList.contains('1'))
+        {
+            boxes[1].classList.toggle('white');
+            boxes[3].classList.toggle('white');
+            boxes[5].classList.toggle('white');
+            boxes[7].classList.toggle('white');
+        }
+        if(el.classList.contains('row1')&& el.classList.contains('2'))
+        {
+            boxes[2].classList.toggle('white');
+            boxes[4].classList.toggle('white');
+            boxes[8].classList.toggle('white');
+        }
+        if(el.classList.contains('row2')&& el.classList.contains('0'))
+        {
+            boxes[3].classList.toggle('white');
+            boxes[7].classList.toggle('white');
+        }
+        if(el.classList.contains('row2')&& el.classList.contains('1'))
+        {
+            boxes[4].classList.toggle('white');
+            boxes[6].classList.toggle('white');
+            boxes[8].classList.toggle('white');
+        }
+        if(el.classList.contains('row2')&& el.classList.contains('2')){
+            boxes[5].classList.toggle('white');
+            boxes[7].classList.toggle('white');
+        }
     }
     // if(el.classList.contains("white")){
     //     el.classList.remove("white");
