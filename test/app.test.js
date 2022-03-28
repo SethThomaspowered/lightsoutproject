@@ -18,3 +18,11 @@ describe('init', ()=>{
         assert.ok()
     }) 
 })
+describe('reset', ()=>{
+    it('on click returns board to white', ()=>{
+        const expected = 'white';
+        const box = document.querySelector('.box');
+        reset();
+        assert.ok(box.classList.contains(expected));
+    })
+})
