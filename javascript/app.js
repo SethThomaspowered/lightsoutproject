@@ -50,7 +50,7 @@ const generateBoard = (board, rows = 3, columns=3) =>{
 }
 let boxes;
 const toggleLights=(el, rows)=>{
-    boxes=document.querySelectorAll('.box');          
+    boxes=document.querySelectorAll('.box');       
     el.classList.toggle('white');
     if(rows===2){
         if(el.classList.contains('row0')&& el.classList.contains('1'))
@@ -181,4 +181,15 @@ const toggleLights=(el, rows)=>{
 //         console.log("background is not white");
 //     }
 // }
+const reset=()=>{
+    boxes=document.querySelectorAll('.box');
+    for(let i= 0; i<boxes.length; i++){
+        boxes[i].classList.add('white');
+    }
+}
+const resetBtn = document.querySelector('#reset');
+resetBtn.addEventListener('click', (e)=>{
+    reset();
+});
+
 document.addEventListener('DOMContentLoaded', init);
