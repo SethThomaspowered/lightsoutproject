@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Towesome</title>
+    <link href="css/stretch.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4246e62b07.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Tic-Tac-Towesome</h1>
+        <nav>
+            <a href="setting.html">Settings</a>
+        </nav>
+    </header>
+    <main>
+
+        <ul><button id='reset'>Ready Player One</button>
+        <table>
+            <thead><td>Player One Score</td><td>Player Two Score</td><td>Tie Game</td></thead>
+            <tr><td id="p1s">0</td><td id="p2s">0</td><td id="catScore">0</td></tr>
+        </table>
+        </ul>
+        <div class="container">
+            <section class="game grid">
+                <div class='square one'></div>
+                <div class='square two'></div>
+                <div class='square three'></div>
+                <div class='square four'></div>
+                <div class='square five'></div>
+                <div class='square six'></div>
+                <div class='square seven'></div>
+                <div class='square eight'></div>
+                <div class='square nine'></div>
+            </section>
+        </div>
+        <div class="randomCat">
+            <img src="" id="randomCatImage" alt='Consolation Prize'>
+        </div>
+        
+    </main>
+    
+    <footer>&copy; 2021 <a href="https://SethThomaspowered.github.io/portfolio">Created by Seth Thomas</a></footer>
+    
+    <script src="javascript/script.js"></script>
+    <script src="javascript/winningconditions.js"></script>
+    <script src="javascript/gameOptions.js"></script>
+</body>
+</html>
