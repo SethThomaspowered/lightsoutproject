@@ -11,7 +11,14 @@ I also created a game of Tic Tac Toe.
 - When a player clicks on a square it will toggle from white to black and the surrounding squares will toggle.
 - The goal of the game is get all of the squares to be black.   
 - A player should be able to see how long it takes them to solve the puzzle.
--
+
+### Tic-Tac-Toe
+- As a user, you should be able to play a game of tic tac toe.
+- As a user, when you click on a square a X or an O should appear.
+- As a user, you should be notified when you win.
+- As a user, you should not be able to click on the same square twice in a game.
+- As a user, you would like to play again without refreshing the page.
+- As a user, you would like to customize your experience.
 ## Javascript requirements
 
 - Retrieve data from an external API and display data in your app (such as with fetch() or with AJAX)
