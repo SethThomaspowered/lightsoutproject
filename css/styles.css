@@ -1,10 +1,10 @@
 :root {
-    --color-black: #121212;
-    --color-white: #fff;
+    --color-black: hsl(0, 0%, 7%);
+    --color-white: hsl(0, 0%, 100%);
     --color-green: hsl(115, 29%, 43%);
-    --color-yellow: #b59f3b;
-    --color-gray-dark: #3A3A3C;
-    --color-gray-light: #818384;
+    --color-yellow: hsl(49, 51%, 47%);
+    --color-gray-dark: hsl(240, 2%, 23%);
+    --color-gray-light: hsl(200, 1%, 51%);
 }
 html {
     box-sizing: border-box;
@@ -69,6 +69,7 @@ li{
     background-color: var(--color-black);
     color: var(--color-black);
 }
+
 #reset{
     background-color: var(--color-green);
     padding: 1rem;
@@ -77,8 +78,25 @@ li{
     border-radius: 15%;
     gap: 10px;
 }
+#startTimer, #pauseTimer{
+    background-color: var(--color-yellow);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 15%;
+    margin-right: 2px;
+    margin-left: 2px;
+    gap: 10px;
+}
+#startTimer:hover, #pauseTimer:hover{
+    background-color: hsl(49, 51%, 73%);
+    cursor: pointer;
+}
 #reset:hover{
     background-color: hsl(115, 29%, 73%);
     cursor: pointer;
 }
 footer { border-top: 1px solid var(--color-gray-dark);}
+.nav{
+    text-align: center;
+}
