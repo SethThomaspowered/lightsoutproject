@@ -1,8 +1,20 @@
+:root {
+    --color-black: hsl(0, 0%, 7%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-green: hsl(115, 29%, 43%);
+    --color-yellow: hsl(49, 51%, 47%);
+    --color-gray-dark: hsl(240, 2%, 23%);
+    --color-gray-light: hsl(200, 1%, 51%);
+}
 body{
     text-align: center;
-    background-color: midnightblue;
+    background-color: var(--color-gray-dark);
     color: #fff;
     min-height: 100vh;
+}
+header{
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
 table{
     background: #ff5400;
@@ -37,18 +49,30 @@ table{
 .green{
     background: green;
 }
-h1 {
-    color: aquamarine;
-}
+
 button {
+    background-color: var(--color-green);
+    padding: 1rem;
     text-align: center;
+    border: 1px solid;
+    border-radius: 15%;
+    margin-right: 2px;
+    margin-left: 2px;
+    gap: 10px;
 }    
+button:hover{
+    background-color: hsl(115, 29%, 73%);
+    cursor: pointer;
+}
 img {
     height: 80px;
     width: 80px;
     box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
 }
 footer{
-    justify-content: flex-end;
-    background: #827081
+    justify-content: baseline;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 10px;
+    margin-bottom: 0;
 }
