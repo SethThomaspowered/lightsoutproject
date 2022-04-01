@@ -69,6 +69,7 @@ li{
     background-color: var(--color-black);
     color: var(--color-black);
 }
+
 #reset{
     background-color: var(--color-green);
     padding: 1rem;
@@ -82,3 +83,6 @@ li{
     cursor: pointer;
 }
 footer { border-top: 1px solid var(--color-gray-dark);}
+.nav{
+    text-align: center;
+}
